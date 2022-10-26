@@ -22,6 +22,10 @@
 		7E5005BF2905BF7600E125FD /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E5005BE2905BF7600E125FD /* ContentView.swift */; };
 		7E5005C12905C8B000E125FD /* ContentViewRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E5005C02905C8B000E125FD /* ContentViewRow.swift */; };
 		7E5005C32905CABF00E125FD /* ContentDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E5005C22905CABF00E125FD /* ContentDetailView.swift */; };
+		7E5005C62905D07700E125FD /* AVKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7E5005C52905D07700E125FD /* AVKit.framework */; };
+		7E5005C82905D37D00E125FD /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E5005C72905D37D00E125FD /* Constants.swift */; };
+		7E50063E2908195500E125FD /* CodeTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E50063D2908195500E125FD /* CodeTextView.swift */; };
+		7E71943C2909CC5A0070614A /* RectangleCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E71943B2909CC5A0070614A /* RectangleCard.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -60,6 +64,10 @@
 		7E5005BE2905BF7600E125FD /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		7E5005C02905C8B000E125FD /* ContentViewRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentViewRow.swift; sourceTree = "<group>"; };
 		7E5005C22905CABF00E125FD /* ContentDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentDetailView.swift; sourceTree = "<group>"; };
+		7E5005C52905D07700E125FD /* AVKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVKit.framework; path = System/Library/Frameworks/AVKit.framework; sourceTree = SDKROOT; };
+		7E5005C72905D37D00E125FD /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		7E50063D2908195500E125FD /* CodeTextView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CodeTextView.swift; sourceTree = "<group>"; };
+		7E71943B2909CC5A0070614A /* RectangleCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RectangleCard.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -67,6 +75,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7E5005C62905D07700E125FD /* AVKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -94,6 +103,7 @@
 				7E50059329058D1600E125FD /* LearningApp100Tests */,
 				7E50059D29058D1600E125FD /* LearningApp100UITests */,
 				7E50058129058D1400E125FD /* Products */,
+				7E5005C42905D07700E125FD /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -155,6 +165,8 @@
 				7E5005BE2905BF7600E125FD /* ContentView.swift */,
 				7E5005C02905C8B000E125FD /* ContentViewRow.swift */,
 				7E5005C22905CABF00E125FD /* ContentDetailView.swift */,
+				7E50063D2908195500E125FD /* CodeTextView.swift */,
+				7E71943B2909CC5A0070614A /* RectangleCard.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -180,6 +192,7 @@
 			children = (
 				7E5005B729058F2C00E125FD /* data.json */,
 				7E5005B829058F2C00E125FD /* style.html */,
+				7E5005C72905D37D00E125FD /* Constants.swift */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -189,6 +202,14 @@
 			children = (
 			);
 			path = Helpers;
+			sourceTree = "<group>";
+		};
+		7E5005C42905D07700E125FD /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				7E5005C52905D07700E125FD /* AVKit.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -329,8 +350,11 @@
 				7E5005C32905CABF00E125FD /* ContentDetailView.swift in Sources */,
 				7E5005B629058E5500E125FD /* Module.swift in Sources */,
 				7E5005C12905C8B000E125FD /* ContentViewRow.swift in Sources */,
+				7E71943C2909CC5A0070614A /* RectangleCard.swift in Sources */,
+				7E50063E2908195500E125FD /* CodeTextView.swift in Sources */,
 				7E50058429058D1400E125FD /* LearningApp100.swift in Sources */,
 				7E5005B429058E3E00E125FD /* ContentModel.swift in Sources */,
+				7E5005C82905D37D00E125FD /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

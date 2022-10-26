@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import AVFoundation
 
 class ContentModel: ObservableObject {
     
@@ -19,7 +20,27 @@ class ContentModel: ObservableObject {
     var currentModelIndex = 0
     
     
+    
+    //Current Lesson Explanation
+    
+    @Published var lessonDescription = NSAttributedString()
+    
+    
+    
+    
+    //Current Lesson
+    
+    
+    @Published var currentLesson: Lesson?
+    
+    var currentLessonIndex = 0
+    
     var styleData: Data?
+    
+    //Current selected content and test
+    
+    @Published var currentContentSelected: Int?
+    
     
     
     init() {
@@ -102,4 +123,106 @@ class ContentModel: ObservableObject {
         
     }
     
-}
+    func beginLesson (lessonIndex: Int) {
+        
+        //Check that the current lesson is within range of module lessons
+        if lessonIndex < currentModule!.content.lessons.count {
+            
+            currentLessonIndex = lessonIndex
+            
+            
+        }
+        else {
+            
+            currentLessonIndex = 0
+            
+            
+        }
+        
+        //Set the current lessons
+        currentLesson = currentModule!.content.lessons[currentLessonIndex]
+        lessonDescription = addStyling(htmlString: currentLesson!.explanation)
+        
+        
+        
+        
+        
+        
+    }
+    
+    func nextLesson() {
+        
+        //Advance the lesson index
+        currentLessonIndex += 1
+        //Check that it is within range
+        if currentLessonIndex < currentModule!.content.lessons.count {
+            
+            //Set the current lesson property
+            currentLesson = currentModule!.content.lessons[currentLessonIndex]
+            
+            lessonDescription = addStyling(htmlString: currentLesson!.explanation)
+            
+        }
+        else {
+            
+            //Reset the lesson state
+            currentLessonIndex = 0
+            currentLesson = nil
+            
+        }
+        
+       
+    }
+    
+    
+    func hasNextLesson() -> Bool {
+        
+        
+        return (currentLessonIndex + 1 < currentModule!.content.lessons.count)
+    }
+    
+    //MARK: - Code Styling
+    
+    private func addStyling ( htmlString: String) -> NSAttributedString {
+        
+        
+        var resultString = NSAttributedString()
+        
+        
+        return resultString
+        
+        var data = Data()
+        
+        
+        if styleData != nil {
+        data.append(self.styleData!)
+            
+            
+        }
+        data.append(Data(htmlString.utf8))
+    
+        if let attributedString = try? NSAttributedString(data: data, options: [.documentType: NSAttributedString.DocumentType.html], documentAttributes: nil) {
+            
+            resultString = attributedString
+        
+            
+        }
+        
+        
+        
+        
+        
+       }
+        
+        
+    }
+    
+    
+    
+    
+    
+    
+    
+    
+    
+
