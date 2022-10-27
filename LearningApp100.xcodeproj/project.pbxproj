@@ -26,6 +26,7 @@
 		7E5005C82905D37D00E125FD /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E5005C72905D37D00E125FD /* Constants.swift */; };
 		7E50063E2908195500E125FD /* CodeTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E50063D2908195500E125FD /* CodeTextView.swift */; };
 		7E71943C2909CC5A0070614A /* RectangleCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E71943B2909CC5A0070614A /* RectangleCard.swift */; };
+		7E71943E2909CF1E0070614A /* TestView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E71943D2909CF1E0070614A /* TestView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -68,6 +69,7 @@
 		7E5005C72905D37D00E125FD /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		7E50063D2908195500E125FD /* CodeTextView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CodeTextView.swift; sourceTree = "<group>"; };
 		7E71943B2909CC5A0070614A /* RectangleCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RectangleCard.swift; sourceTree = "<group>"; };
+		7E71943D2909CF1E0070614A /* TestView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -167,6 +169,7 @@
 				7E5005C22905CABF00E125FD /* ContentDetailView.swift */,
 				7E50063D2908195500E125FD /* CodeTextView.swift */,
 				7E71943B2909CC5A0070614A /* RectangleCard.swift */,
+				7E71943D2909CF1E0070614A /* TestView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -344,6 +347,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7E71943E2909CF1E0070614A /* TestView.swift in Sources */,
 				7E50058629058D1400E125FD /* HomeView.swift in Sources */,
 				7E5005BC29059C7700E125FD /* HomeViewRow.swift in Sources */,
 				7E5005BF2905BF7600E125FD /* ContentView.swift in Sources */,

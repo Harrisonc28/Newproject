@@ -23,7 +23,7 @@ class ContentModel: ObservableObject {
     
     //Current Lesson Explanation
     
-    @Published var lessonDescription = NSAttributedString()
+    @Published var codeText = NSAttributedString()
     
     
     
@@ -41,6 +41,14 @@ class ContentModel: ObservableObject {
     
     @Published var currentContentSelected: Int?
     
+    @Published var currentTestSelected: Int?
+    
+    
+    //Current Question
+    
+    @Published var currentQuestion: Question?
+    
+    var currentQuestionIndex = 0
     
     
     init() {
@@ -141,7 +149,7 @@ class ContentModel: ObservableObject {
         
         //Set the current lessons
         currentLesson = currentModule!.content.lessons[currentLessonIndex]
-        lessonDescription = addStyling(htmlString: currentLesson!.explanation)
+        codeText = addStyling(htmlString: currentLesson!.explanation)
         
         
         
@@ -160,7 +168,7 @@ class ContentModel: ObservableObject {
             //Set the current lesson property
             currentLesson = currentModule!.content.lessons[currentLessonIndex]
             
-            lessonDescription = addStyling(htmlString: currentLesson!.explanation)
+            codeText = addStyling(htmlString: currentLesson!.explanation)
             
         }
         else {
@@ -179,6 +187,26 @@ class ContentModel: ObservableObject {
         
         
         return (currentLessonIndex + 1 < currentModule!.content.lessons.count)
+    }
+    
+    
+    func beginTest( moduleId: Int) {
+        
+        //Set the current module
+        beginModule(moduleid: moduleId)
+        
+        //Set the current question
+        currentQuestionIndex = 0
+        
+        if currentModule?.test.questions.count ?? 0 > 0 {
+        
+            currentQuestion = currentModule!.test.questions[currentQuestionIndex]
+            
+            
+            
+            //Set the current question
+            codeText = addStyling(htmlString: currentQuestion!.content)
+     }
     }
     
     //MARK: - Code Styling
